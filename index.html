@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>학년별 과학 퀴즈</title>
+<title>K-Science 과학퀴즈</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@ button { font: inherit; color: inherit; cursor: pointer; -webkit-tap-highlight-c
 main { max-width: 600px; margin: 0 auto; padding: 0 22px 64px; }
 
 /* Start */
-#start { min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; justify-content: center; padding-bottom: 8vh; }
+#start { min-height: calc(100vh - 110px); min-height: calc(100dvh - 110px); display: flex; flex-direction: column; justify-content: center; padding-bottom: 8vh; }
 #start h1 { margin: 0 0 10px; font-size: clamp(34px, 8vw, 46px); line-height: 1.2; letter-spacing: -0.035em; }
 #start p { margin: 0 0 36px; color: var(--soft); font-size: 17px; }
 
@@ -105,12 +105,13 @@ main { max-width: 600px; margin: 0 auto; padding: 0 22px 64px; }
 .grade:hover { border-color: var(--ink); }
 .grade span { display: block; font-size: 13px; font-weight: 500; color: var(--faint); margin-top: 2px; }
 #start .note { margin: 22px 0 0; font-size: 13px; color: var(--faint); }
+.credit { margin: 0; padding: 0 22px 20px; text-align: center; font-size: 12px; color: var(--faint); }
 </style>
 </head>
 <body>
 <main>
   <section id="start">
-    <h1>과학 퀴즈</h1>
+    <h1>K-Science 과학퀴즈</h1>
     <p>학년을 고르면 바로 시작해요.</p>
     <div class="grades" id="grades"></div>
     <p class="note">학년마다 10문제가 무작위로 나와요. 1·2학년은 통합교과(슬기로운 생활), 3~6학년은 과학 교과 내용이에요.</p>
@@ -142,6 +143,7 @@ main { max-width: 600px; margin: 0 auto; padding: 0 22px 64px; }
     <div class="review" id="review"></div>
   </section>
 </main>
+<footer class="credit">세명초등학교 3학년 별반 K-Science팀</footer>
 
 <script>
 const ROUND = 10;
